@@ -88,20 +88,24 @@ export const App = () => {
               <section key={joke.id}>
                 <li className="joke-list-item">
                   <p className="joke-list-item-text">{joke.text}</p>
-                  <button
-                    onClick={() => {
-                      editJoke(joke);
-                    }}
-                  >
-                    😃
-                  </button>
-                  <button
-                    onClick={() => {
-                      deleteJoke(joke);
-                    }}
-                  >
-                    🗑️
-                  </button>
+                  <div className="joke-list-action-toggle ">
+                    <button
+                      onClick={() => {
+                        editJoke(joke);
+                      }}
+                    >
+                      😃
+                    </button>
+                  </div>
+                  <div className="joke-list-action-delete">
+                    <button
+                      onClick={() => {
+                        deleteJoke(joke);
+                      }}
+                    >
+                      🗑️
+                    </button>
+                  </div>
                 </li>
               </section>
             );
@@ -117,20 +121,24 @@ export const App = () => {
               <section key={joke.id}>
                 <li className="joke-list-item">
                   <p className="joke-list-item-text">{joke.text}</p>
-                  <button
-                    onClick={() => {
-                      editJoke(joke);
-                    }}
-                  >
-                    ☹️
-                  </button>
-                  <button
-                    onClick={() => {
-                      deleteJoke(joke);
-                    }}
-                  >
-                    🗑️
-                  </button>
+                  <div className="joke-list-action-toggle">
+                    <button
+                      onClick={() => {
+                        editJoke(joke);
+                      }}
+                    >
+                      ☹️
+                    </button>
+                  </div>
+                  <div className="joke-list-action-delete">
+                    <button
+                      onClick={() => {
+                        deleteJoke(joke);
+                      }}
+                    >
+                      🗑️
+                    </button>
+                  </div>
                 </li>
               </section>
             );
